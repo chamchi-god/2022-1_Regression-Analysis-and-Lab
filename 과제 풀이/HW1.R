@@ -56,8 +56,8 @@ t0<- (2.1626-1)/sqrt(varb1) #6.3..
 qt(0.95, 7)# 1.89..
 #T0>T(0.05,7) 따라서 기각한다.
 
-varyhat<-0.108*(1/9+mean(X)^2/sum((X-mean(X))^2))
-yhat <- mean(Y)- sum((X-mean(X))*(Y-mean(Y)))/sum((X-mean(X))^2)*(2-mean(X))
+varyhat<-0.108*(1/9+(2-mean(X))^2/sum((X-mean(X))^2))
+yhat <- mean(Y)+ sum((X-mean(X))*(Y-mean(Y)))/sum((X-mean(X))^2)*(2-mean(X))
 t<-(yhat-3.3)/sqrt(varyhat)
 abs(t)-qt(0.95, 7) #0보다 크므로 기각한다.
 
